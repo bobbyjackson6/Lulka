@@ -1,0 +1,58 @@
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 28px;
+        background: url(../img/background-mobile.png) no-repeat center center/cover;
+    }
+
+    .container {
+        margin: 0 10px;
+    }
+
+    .logo {
+        width: 254px;
+        height: 55px;
+        margin-bottom: 160px;
+    }
+
+    .logo img {
+        width: 187px;
+    }
+
+    .video {
+        width: 296px;
+        height: 166px;
+        margin-bottom: 36px;
+
+    }
+
+    .diagrams {
+        margin-bottom: 145px;
+    }
+
+    .diagram-title {
+        margin-bottom: 5px;
+    }
+
+    .modes,
+    .mode-buttons {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        margin-right: -50%;
+    }
+
+    .modes {
+        transform: translate(-50%, 130px)
+    }
+
+    .mode-buttons {
+        transform: translate(-50%, 0px)
+    }
+
+    .mode-buttons button {
+        padding: 0;
+        width: 59px;
+        height: 59px;
+        margin: 0 8px;
+    }
+}

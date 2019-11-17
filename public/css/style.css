@@ -1,0 +1,90 @@
+body {
+  width: 100%;
+  background: url(../img/Background.png) no-repeat center center / cover;
+  font-size: 35px;
+  color: #8e776f;
+}
+
+.container {
+  /* background-image: url(img/Background.png);
+    background-size: contain; */
+  margin: 0;
+  margin: 0 5%;
+  font-family: coquettec;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Header (Logo) */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 470px;
+  height: 100px;
+  background: #f3f8f9;
+}
+
+.logo img {
+  width: 345px;
+}
+
+/* Videos */
+.videos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 55px;
+}
+
+.video {
+  width: 524px;
+  height: 293px;
+  margin-bottom: 55px;
+  border: 1px solid #917c74;
+}
+
+/* Diagrams */
+
+.diagrams {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 170px;
+}
+
+.chart {
+  border: 1px solid #917c74;
+}
+
+/* Режимы качания */
+.modes {
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.mode-buttons {
+  margin: 67px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mode-buttons button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.mode-buttons button > * {
+  width: 100%;
+}

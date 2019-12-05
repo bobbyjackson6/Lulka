@@ -1,81 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
-    <link rel=" stylesheet" href="css/style.css" type="text/css" />
-    <link rel=" stylesheet" href="css/media.css" type="text/css" />
-    <style>
-      @font-face {
-        font-family: coquettec;
-        /* Гарнитура шрифта */
-        src: url(fonts/coquettec.ttf);
-        /* Путь к файлу со шрифтом */
-      }
-    </style>
-    <title>Люлька</title>
-  </head>
 
-  <body>
-    <div class=" container">
-      <header>
-        <div class="logo"><img src="img/Logo.png" alt="Умная люлька" /></div>
-      </header>
-      <section class="videos">
-        <img src="" alt="" id="video-1" class="video video-1" />
-        <img src="" alt="" id="video-2" class="video video-2" />
-      </section>
-      <section class="diagrams">
-        <div class="diagram-box">
-          <div class="diagram-title title">Температура</div>
-          <!-- <div class="chart" id="chart"></div> -->
-          <canvas
-            id="mycanvas-1"
-            class="chart"
-            width="268"
-            height="224"
-          ></canvas>
-        </div>
-        <div class="diagram-box">
-          <div class="diagram-title title">Дыхание</div>
-          <canvas
-            id="mycanvas-2"
-            class="chart"
-            width="268"
-            height="224"
-          ></canvas>
-        </div>
-        <div class="diagram-box">
-          <div class="diagram-title title">Сердцебиение</div>
-          <canvas
-            id="mycanvas-3"
-            class="chart"
-            width="268"
-            height="224"
-          ></canvas>
-        </div>
-        <div class="diagram-box">
-          <div class="diagram-title title">Активность</div>
-          <canvas
-            id="mycanvas-4"
-            class="chart"
-            width="268"
-            height="224"
-          ></canvas>
-        </div>
-      </section>
-      <p class="modes">Режимы качания</p>
-      <section class="mode-buttons">
-        <button><img src="img/power.png" alt="" /></button>
-        <button><img src="img/top-bottom.png" alt="" /></button>
-        <button><img src="img/left-right.png" alt="" /></button>
-        <button><img src="img/all-directions.png" alt="" /></button>
-      </section>
-    </div>
-  </body>
-  <script src="/socket.io/socket.io.js"></script>
-  <script type="text/javascript" src="js/smoothie.js"></script>
-  <script src="js/client.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+  <link rel=" stylesheet" href="css/style.css" type="text/css" />
+  <link rel=" stylesheet" href="css/media.css" type="text/css" />
+  <style>
+    @font-face {
+      font-family: coquettec;
+      /* Гарнитура шрифта */
+      src: url(fonts/coquettec.ttf);
+      /* Путь к файлу со шрифтом */
+    }
+  </style>
+  <title>Люлька</title>
+</head>
+
+<body>
+  <div class=" container">
+    <header>
+      <div class="logo"><img src="img/Logo.png" alt="Умная люлька" /></div>
+    </header>
+    <section class="videos">
+      <img src="" alt="" id="video-1" class="video video-1" height="400" />
+      <img src="" alt="" id="video-2" class="video video-2" height="400" />
+    </section>
+    <section class="diagrams">
+      <div class="diagram-box">
+        <div class="diagram-title title">Температура</div>
+        <!-- <div class="chart" id="chart"></div> -->
+        <canvas id="mycanvas-1" class="chart" height="224"></canvas>
+      </div>
+      <div class="diagram-box">
+        <div class="diagram-title title">Дыхание</div>
+        <canvas id="mycanvas-2" class="chart" height="224"></canvas>
+      </div>
+      <div class="diagram-box">
+        <div class="diagram-title title">Сердцебиение</div>
+        <canvas id="mycanvas-3" class="chart" height="224"></canvas>
+      </div>
+      <div class="diagram-box">
+        <div class="diagram-title title">Активность</div>
+        <canvas id="mycanvas-4" class="chart" height="224"></canvas>
+      </div>
+    </section>
+    <p class="modes">Режимы качания</p>
+    <section class="mode-buttons">
+      <button id="power" onclick="on_off()">
+        <img src="img/power.png" alt="" />
+      </button>
+      <button id="up_down" onclick="up_down_move()">
+        <img src="img/top-bottom.png" alt="" />
+      </button>
+      <button id="left_right" onclick="left_right_move()">
+        <img src="img/left-right.png" alt="" />
+      </button>
+      <button id="magic_fly" onclick="magic_fly_move()">
+        <img src="img/all-directions.png" alt="" />
+      </button>
+    </section>
+  </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="js/smoothie.js"></script>
+<script src="js/client.js"></script>
+
 </html>

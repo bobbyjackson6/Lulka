@@ -19,7 +19,7 @@
     }
 
     .video {
-        width: 296px;
+        width: 75vw;
         height: 166px;
         margin-bottom: 36px;
 
@@ -33,10 +33,14 @@
         margin-bottom: 5px;
     }
 
+    .chart {
+        width: 75vw;
+    }
+
     .modes,
     .mode-buttons {
         position: absolute;
-        top: 50px;
+        top: 30px;
         left: 50%;
         margin-right: -50%;
     }

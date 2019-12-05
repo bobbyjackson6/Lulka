@@ -26,7 +26,6 @@ io.sockets.on('connection', (socket) => {
     // When the client connects, they are sent a message
     var sending_image = function () {
         socket.emit("firstCamera", `${image[counter]}`);
-        console.log(image[counter]);
         counter++;
         if (counter == image.length) {
             counter = 0;
@@ -34,15 +33,34 @@ io.sockets.on('connection', (socket) => {
     };
     setInterval(sending_image, 300);
     var sending_image_2 = function () {
-        socket.emit("secondCamera", `${image[counter-1]}`);
-        console.log(image[counter]);
+        socket.emit("secondCamera", `${image[counter]}`);
         counter++;
         if (counter == image.length) {
             counter = 0;
         }
     };
     setInterval(sending_image_2, 200);
+
+    socket.on("power", function (signal) {
+        var on_off_signal = signal;
+        console.log(`Power Mode: ${on_off_signal}`)
+    });
+    socket.on("up_down", function (signal) {
+        var up_down_signal = signal;
+        console.log(`Up-Down Mode: ${up_down_signal}`)
+    });
+    socket.on("left_right", function (signal) {
+        var left_right_signal = signal;
+        console.log(`Left-Right Mode: ${left_right_signal}`)
+    });
+    socket.on("magic_fly", function (signal) {
+        var magic_fly_signal = signal;
+        console.log(`Magic Fly Mode: ${magic_fly_signal}`)
+    });
 })
+
+
+
 
 server.listen(port, () => {
     console.log(`Server has been started on port ${port}...`)

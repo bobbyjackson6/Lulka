@@ -46,8 +46,9 @@ header {
 }
 
 .video {
-  width: 524px;
-  height: 293px;
+  width: 40vw;
+  height: 5
+   0vh;
   margin-bottom: 55px;
   border: 1px solid #917c74;
 }
@@ -63,6 +64,7 @@ header {
 
 .chart {
   border: 1px solid #917c74;
+  width: 20vw;
 }
 
 /* Режимы качания */
@@ -76,15 +78,16 @@ header {
 .mode-buttons {
   margin: 67px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .mode-buttons button {
   background: none;
   border: none;
   outline: none;
+  margin: 0 30px;
 }
 
-.mode-buttons button > * {
+.mode-buttons button>* {
   width: 100%;
 }
